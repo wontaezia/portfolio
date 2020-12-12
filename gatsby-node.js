@@ -1,4 +1,6 @@
 const path = require('path');
+const _ = require('lodash');
+const { slugify } = require('./src/util/utilityFuctions.js');
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -13,5 +15,39 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         '@styles': path.resolve(__dirname, 'src/styles/'),
       },
     },
+  });
+};
+
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
+  const templates = {
+    singlePost: path.resolve(`./src/templates/post.js`),
+  };
+
+  return graphql(`
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `).then(({ data }) => {
+    const posts = data.allMarkdownRemark.edges;
+
+    posts.forEach(({ node }) => {
+      const { slug } = node.frontmatter;
+      createPage({
+        path: '/blog/' + slug,
+        component: templates.singlePost,
+        context: {
+          slug,
+        },
+      });
+    });
   });
 };
