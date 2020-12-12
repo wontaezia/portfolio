@@ -7,6 +7,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
     resolve: {
       alias: {
         '@public': path.resolve(__dirname, 'public/'),
+        '@data': path.resolve(__dirname, 'src/data/'),
         '@images': path.resolve(__dirname, 'src/images/'),
         '@components': path.resolve(__dirname, 'src/components/'),
         '@redux': path.resolve(__dirname, 'src/redux/'),
