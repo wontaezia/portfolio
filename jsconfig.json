@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es6",
+    "module": "commonjs",
+    "paths": {
+      "@public/*": ["./public/*"],
+      "@images/*": ["./src/images/*"],
+      "@util/*": ["./src/util/*"],
+      "@components/*": ["./src/components/*"],
+      "@redux/*": ["src/redux/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@styles/*": ["./src/styles/*"]
+    }
+  }
+}
