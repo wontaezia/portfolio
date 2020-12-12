@@ -22,6 +22,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   const templates = {
     singlePost: path.resolve(`./src/templates/post.js`),
+    tagPosts: path.resolve(`./src/templates/tag.js`),
   };
 
   return graphql(`
@@ -31,6 +32,7 @@ exports.createPages = ({ graphql, actions }) => {
           node {
             frontmatter {
               slug
+              tags
             }
           }
         }
@@ -46,6 +48,25 @@ exports.createPages = ({ graphql, actions }) => {
         component: templates.singlePost,
         context: {
           slug,
+        },
+      });
+    });
+
+    let tags = [];
+    _.each(posts, edge => {
+      if (_.get(edge, 'node.frontmatter.tags')) {
+        tags = tags.concat(edge.node.frontmatter.tags);
+      }
+    });
+
+    tags = _.uniq(tags);
+
+    tags.forEach(tag => {
+      createPage({
+        path: `/blog/tag/${slugify(tag)}`,
+        component: templates.tagPosts,
+        context: {
+          tag,
         },
       });
     });

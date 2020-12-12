@@ -4,7 +4,7 @@ slug: 'float'
 author: Wontae Jeong
 date: 2020-08-19
 excerpt: 'float / clear'
-img: 'https://i.imgur.com/5tnpcbm.jpg'
+img: 'https://i.imgur.com/AZmJLam.jpg'
 tags:
   - CSS
 ---

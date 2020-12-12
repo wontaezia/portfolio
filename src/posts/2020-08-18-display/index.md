@@ -4,7 +4,7 @@ slug: 'display'
 author: Wontae Jeong
 date: 2020-08-18
 excerpt: 'block, inline, inline-block'
-img: 'https://i.imgur.com/5tnpcbm.jpg'
+img: 'https://i.imgur.com/AZmJLam.jpg'
 tags:
   - CSS
 ---
