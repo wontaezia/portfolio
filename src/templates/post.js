@@ -3,7 +3,6 @@ import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '@components/layout';
 import SEO from '@components/seo';
-import { MainTitle } from '@components/layout';
 
 function Post({ data }) {
   const {
@@ -15,7 +14,6 @@ function Post({ data }) {
     <Layout>
       <SEO title={title} />
       <Container>
-        <MainTitle>{title}</MainTitle>
         <Body dangerouslySetInnerHTML={{ __html: html }} />
       </Container>
     </Layout>
