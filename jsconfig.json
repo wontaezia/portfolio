@@ -6,6 +6,7 @@
     "paths": {
       "@public/*": ["./public/*"],
       "@images/*": ["./src/images/*"],
+      "@data/*": ["./src/data/*"],
       "@util/*": ["./src/util/*"],
       "@components/*": ["./src/components/*"],
       "@redux/*": ["src/redux/*"],
