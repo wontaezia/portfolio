@@ -59,6 +59,23 @@ const MainTitle = styled.h1`
   border-bottom: 1px solid ${({ theme }) => theme.$darkGray};
   font-weight: 700;
   font-size: 8rem;
+
+  &::after {
+    content: ${({ tag }) => `'${tag ? `#${tag}` : ''}'`};
+    display: ${({ tag }) => (tag ? 'block' : 'none')};
+    padding: 0.6rem;
+    margin: 1rem 0 0;
+    background: ${({ theme }) => theme.$mainColor};
+    color: ${({ theme }) => theme.$white};
+    font-size: 2rem;
+  }
+
+  @media ${device.tablet} {
+    &::after {
+      display: ${({ tag }) => (tag ? 'inline' : 'none')};
+      margin: 0 0 0 3rem;
+    }
+  }
 `;
 
 const PostCount = styled.h4`
