@@ -132,7 +132,7 @@ const Loading = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: ${({ theme }) => theme.$mainColor};
+  background: ${({ theme }) => theme.$black};
   transform: translateY(-120%);
   z-index: 99;
 `;
