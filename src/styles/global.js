@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
 
     &::selection {
       background: ${({ theme }) => theme.$mainColor};
+      color: ${({ theme }) => theme.$white};
     }
   }
 

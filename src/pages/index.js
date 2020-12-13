@@ -75,6 +75,8 @@ const Greeting = styled.ul`
     font-size: 8rem;
     font-weight: 800;
     text-transform: uppercase;
+    transform: translateY(100%);
+    opacity: 0;
   }
 `;
 
@@ -98,9 +100,9 @@ const Mail = styled.div`
 `;
 
 const revealText = () => {
-  gsap.from('.letter', 0.3, {
-    y: 100,
-    opacity: 0,
+  gsap.to('.letter', {
+    y: 0,
+    opacity: 1,
     delay: 1,
     ease: 'power3.easeInOut',
     stagger: {

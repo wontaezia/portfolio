@@ -2,11 +2,9 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import gsap from 'gsap';
-import data from '@data/';
+import { links, paths } from '@data/';
 
 function Menu({ isMenuOpen, handleMenu }) {
-  const { links, paths } = data;
-
   useEffect(() => {
     if (isMenuOpen) {
       openMenu();
