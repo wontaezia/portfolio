@@ -200,13 +200,13 @@ const Tags = styled.ul`
 `;
 
 const staggerList = () => {
-  gsap.from(['.title'], 0.6, {
+  gsap.from(['.mainTitle'], {
     y: 100,
     opacity: 0,
     ease: 'power3.easeInOut',
     delay: 0.5,
   });
-  gsap.from(['.post'], 0.6, {
+  gsap.from(['.post'], {
     y: 100,
     opacity: 0,
     ease: 'power3.easeInOut',
@@ -215,7 +215,7 @@ const staggerList = () => {
       amount: 0.2,
     },
   });
-  gsap.from(['.loading'], 0.6, {
+  gsap.from(['.loading'], {
     y: 0,
     ease: 'power3.easeInOut',
     delay: 1.6,

@@ -4,6 +4,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import theme from '@styles/theme';
 import GlobalStyle from '@styles/global';
 import Header from '@components/header';
+import device from '@styles/device';
 
 function Layout({ children }) {
   return (
@@ -33,5 +34,9 @@ const Container = styled.div`
 `;
 
 const Inner = styled.div`
-  padding: 0 5rem;
+  padding: 0 2rem;
+
+  @media ${device.mobileL} {
+    padding: 0 5rem;
+  }
 `;
