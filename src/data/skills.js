@@ -28,11 +28,7 @@ const skills = [
   {
     id: 2,
     title: `React`,
-    icon: (
-      <IconContext.Provider value={{ color: '#01d7fe' }}>
-        <SiReact />
-      </IconContext.Provider>
-    ),
+    icon: <SiReact />,
     description: `
     Functional Component, Hooks, Class Component, Styled Component, SASS에 익숙하고 라이프 사이클을 적절히 활용할 수 있습니다. 
     현재는 적절한 컴포넌트 분리와 재사용을 위한 Custom Hook 위주로 공부하고 있습니다.
@@ -41,11 +37,7 @@ const skills = [
   {
     id: 3,
     title: `Redux (react-redux)`,
-    icon: (
-      <IconContext.Provider value={{ color: '#7649bb' }}>
-        <SiRedux />
-      </IconContext.Provider>
-    ),
+    icon: <SiRedux />,
     description: `
     Ducks Pattern을 활용하여 리엑트 내의 전역 상태 관리를 할 수 있습니다.
     현재는 미들웨어와 최적화를 위주로 공부하고 있습니다.
@@ -54,11 +46,7 @@ const skills = [
   {
     id: 4,
     title: `Gatsby.js`,
-    icon: (
-      <IconContext.Provider value={{ color: '#7649bb' }}>
-        <SiGatsby />
-      </IconContext.Provider>
-    ),
+    icon: <SiGatsby />,
     description: `
     Static한 개인 웹페이지를 만들기 위해 사용하였습니다.
     스타터를 사용하지 않고 GraphQL와 Gatsby Node APIs를 이용하여 마크다운 블로그를 구축할 수 있고 
@@ -70,12 +58,8 @@ const skills = [
     title: `Node.js / GraphQL`,
     icon: (
       <>
-        <IconContext.Provider value={{ color: '#8fc53f' }}>
-          <SiNodeDotJs />
-        </IconContext.Provider>
-        <IconContext.Provider value={{ color: '#e635ab' }}>
-          <SiGraphql />
-        </IconContext.Provider>
+        <SiNodeDotJs />
+        <SiGraphql />
       </>
     ),
     description: `
@@ -88,12 +72,8 @@ const skills = [
     title: `HTML / CSS`,
     icon: (
       <>
-        <IconContext.Provider value={{ color: '#e54d27' }}>
-          <SiHtml5 />
-        </IconContext.Provider>
-        <IconContext.Provider value={{ color: '#1370b6' }}>
-          <SiCss3 />
-        </IconContext.Provider>
+        <SiHtml5 />
+        <SiCss3 />
       </>
     ),
     description: `

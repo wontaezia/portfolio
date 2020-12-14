@@ -16,6 +16,10 @@ const projects = [
       `Rating 및 리뷰 기능`,
     ],
     techStack: ['React', 'SASS'],
+    links: {
+      github: 'https://github.com/wontaezia/BT21-clone',
+      posting: 'http://localhost:8000/blog/line-friends-clone',
+    },
   },
   {
     id: 2,
@@ -34,6 +38,10 @@ const projects = [
       `Git-rebase, squash를 사용한 git commit 관리`,
     ],
     techStack: ['React', 'styled-components', 'Redux'],
+    links: {
+      github: 'https://github.com/wontaezia/Arket-clone',
+      posting: 'http://localhost:8000/blog/arket-clone',
+    },
   },
   {
     id: 3,
@@ -61,6 +69,10 @@ const projects = [
       'MySQL',
       'AWS (EC2, RDS, Lambda)',
     ],
+    links: {
+      github: '',
+      posting: 'http://localhost:8000/blog/checkmate',
+    },
   },
   {
     id: 4,
@@ -77,6 +89,10 @@ const projects = [
       `gsap을 활용한 애니메이션 효과`,
     ],
     techStack: ['React', 'Gatsby.js', 'styled-components', 'gsap'],
+    links: {
+      github: 'https://github.com/wontaezia/portfolio',
+      posting: '',
+    },
   },
 ];
 
