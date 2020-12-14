@@ -15,8 +15,8 @@ function Resume() {
   return (
     <Layout>
       <SEO title="Resume" description="프론트엔드 개발자 이력서" />
-      <Title className="resume">안녕하세요, 정원태입니다.</Title>
       <Container className="resume">
+        <Title className="resume">안녕하세요, 정원태입니다.</Title>
         <Subhead>Introduce.</Subhead>
         <p>
           사용자의 입장에서 해결해야 할 문제점을 찾고 협업을 통해 개선해나가는
@@ -39,14 +39,6 @@ function Resume() {
 
 export default Resume;
 
-const Title = styled.h1`
-  padding-bottom: 3rem;
-  margin: 18rem 0 8rem;
-  font-weight: 700;
-  font-size: 5rem;
-  line-height: 1.333;
-`;
-
 const Container = styled.div`
   padding-bottom: 10rem;
 
@@ -54,6 +46,14 @@ const Container = styled.div`
     font-size: 1.8rem;
     line-height: 1.6;
   }
+`;
+
+const Title = styled.h1`
+  padding-bottom: 3rem;
+  margin: 18rem 0 8rem;
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 1.333;
 `;
 
 const Subhead = styled.h2`
