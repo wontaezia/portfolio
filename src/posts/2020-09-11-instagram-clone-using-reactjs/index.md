@@ -4,7 +4,7 @@ slug: 'instagram-clone'
 author: Wontae Jeong
 date: 2020-09-11
 excerpt: 'React.js를 이용한 인스타그램 클론'
-img: 'https://i.imgur.com/RCarf6s.jpg'
+img: 'https://i.imgur.com/QHn5SYL.png'
 tags:
   - Project
   - React.js
@@ -13,7 +13,7 @@ tags:
 ---
 
 <div class="imageContainer" style="max-width: 680px; margin: 0 auto">
-<img alt="westagram" src="https://i.imgur.com/mCNpXAl.gifv" />
+<img alt="westagram" src="https://i.imgur.com/mCNpXAl.gif" />
 </div>
 
 ### 🙌 소개
@@ -30,7 +30,7 @@ tags:
 
 ### 🛸 사용 기술
 
-<p className="box" style="padding: 20px 30px">
+<p class="box" >
 React
 <br/>
 JavaScript
@@ -56,12 +56,17 @@ Git
 - media query를 이용한 반응형 구현
 - `MockData`와 `map()`을 활용해 sitemap 구현
 
+#
+
 &nbsp;&nbsp;**메인 페이지**
 
 <img alt="main page" src="https://i.imgur.com/aAknv3I.jpg" />
-<br/>
+
+#
+
 <img alt="main page" src="https://i.imgur.com/vfj9pGi.jpg" />
-<br/>
+
+#
 
 - 댓글 추가 / 삭제 / 좋아요 기능
 - 유저 검색 기능
@@ -70,6 +75,8 @@ Git
 - media query를 이용한 반응형 구현
 
 ### ✍ 기억하고 싶은 코드
+
+#
 
 ```jsx
   constructor() {

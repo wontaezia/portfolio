@@ -13,7 +13,7 @@ function PostPreview({ totalCount, edges, tag }) {
   return (
     <>
       <MainTitle className="mainTitle" tag={tag}>
-        Blog
+        <Link to="/blog/">Blog</Link>
       </MainTitle>
       <PostCount>{totalCount} Posts</PostCount>
       <PostList>
@@ -89,6 +89,7 @@ const PostList = styled.ul`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 3rem;
+  padding-bottom: 10rem;
   margin-top: 10rem;
   color: ${({ theme }) => theme.$black};
 
