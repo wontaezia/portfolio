@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import styled from 'styled-components';
 import Layout from '@components/layout';
 import SEO from '@components/seo';
+import device from '@styles/device';
 
 function IndexPage() {
   useEffect(() => {
@@ -71,12 +72,25 @@ const Greeting = styled.ul`
   height: 60vh;
 
   li {
-    padding-right: 1rem;
-    font-size: 8rem;
+    padding-right: 0.4rem;
+    font-size: 3rem;
     font-weight: 800;
     text-transform: uppercase;
     transform: translateY(100%);
     opacity: 0;
+  }
+
+  @media ${device.mobileL} {
+    li {
+      font-size: 4rem;
+      padding-right: 1rem;
+    }
+  }
+
+  @media ${device.tablet} {
+    li {
+      font-size: 8rem;
+    }
   }
 `;
 
