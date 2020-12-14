@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import gsap from 'gsap';
 import { links, paths } from '@data/';
+import device from '@styles/device';
 
 function Menu({ isMenuOpen, handleMenu }) {
   useEffect(() => {
@@ -78,9 +79,10 @@ const Inner = styled.div`
 const Nav = styled.ul`
   li {
     width: 70rem;
-    height: 13.5rem;
+    height: 8rem;
+    font-size: 4rem;
+
     font-weight: 700;
-    font-size: 8rem;
     overflow: hidden;
 
     a {
@@ -91,6 +93,13 @@ const Nav = styled.ul`
       &:hover {
         color: ${({ theme }) => theme.$black};
       }
+    }
+  }
+
+  @media ${device.tablet} {
+    li {
+      height: 13.5rem;
+      font-size: 8rem;
     }
   }
 `;
@@ -115,6 +124,12 @@ const SocialMedia = styled.ul`
 
     &:hover {
       fill: ${({ theme }) => theme.$black};
+    }
+  }
+
+  @media ${device.tablet} {
+    li {
+      font-size: 4rem;
     }
   }
 `;
