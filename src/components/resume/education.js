@@ -4,19 +4,25 @@ import { experiences } from '@data/';
 
 function Education() {
   return (
-    <ul>
+    <Container>
       {experiences.map(({ id, title, time, description }) => (
         <li key={id}>
-          <Title>{title}</Title>
+          <Title className={`education${id}`} length={experiences.length}>
+            {title}
+          </Title>
           <Time>{time}</Time>
           <p>{description}</p>
         </li>
       ))}
-    </ul>
+    </Container>
   );
 }
 
 export default Education;
+
+const Container = styled.ul`
+  ${({ theme }) => theme.flex(null, null, 'column-reverse')}
+`;
 
 const Title = styled.h3`
   margin-top: 4rem;
@@ -25,7 +31,7 @@ const Title = styled.h3`
 
   ${({ length }) =>
     css`
-      &.project${length} {
+      &.education${length} {
         margin-top: 0;
       }
     `}
