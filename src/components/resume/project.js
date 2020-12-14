@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled, { css } from 'styled-components';
 import { projects } from '@data/';
 import device from '@styles/device';
@@ -7,10 +8,29 @@ function Project() {
   return (
     <Container>
       {projects.map(
-        ({ id, title, time, team, description, whatIDid, techStack }) => (
+        ({
+          id,
+          title,
+          time,
+          team,
+          description,
+          whatIDid,
+          techStack,
+          links,
+        }) => (
           <Inner key={id}>
             <Title className={`project${id}`} length={projects.length}>
               {title}
+              <Links>
+                {links.github && (
+                  <a href={links.github} rel="noreferrer" target="_blank">
+                    Github &gt;
+                  </a>
+                )}
+                {links.posting && (
+                  <Link to={links.posting}>블로그 포스팅 &gt;</Link>
+                )}
+              </Links>
             </Title>
             <Detail>
               <li>
@@ -62,9 +82,12 @@ const Container = styled.div`
 const Inner = styled.div``;
 
 const Title = styled.h3`
+  ${({ theme }) => theme.flex(null, 'center')}
+  flex-wrap: wrap;
   margin-top: 4rem;
   font-weight: bolder;
   font-size: 2rem;
+  line-height: 1.5;
 
   ${({ length }) =>
     css`
@@ -132,5 +155,18 @@ const TechStack = styled.li`
 
   li {
     margin-right: 2rem;
+  }
+`;
+
+const Links = styled.div`
+  a {
+    font-size: 1.4rem;
+    padding: 0.2rem 0.4rem;
+    background: ${({ theme }) => theme.$mainColor};
+    color: ${({ theme }) => theme.$white};
+
+    &:first-child {
+      margin: 0 1.6rem 0 2rem;
+    }
   }
 `;
