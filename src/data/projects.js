@@ -18,7 +18,7 @@ const projects = [
     techStack: ['React', 'SASS'],
     links: {
       github: 'https://github.com/wontaezia/BT21-clone',
-      posting: 'http://localhost:8000/blog/line-friends-clone',
+      posting: '/blog/line-friends-clone',
     },
   },
   {
@@ -40,7 +40,7 @@ const projects = [
     techStack: ['React', 'styled-components', 'Redux'],
     links: {
       github: 'https://github.com/wontaezia/Arket-clone',
-      posting: 'http://localhost:8000/blog/arket-clone',
+      posting: '/blog/arket-clone',
     },
   },
   {
@@ -71,7 +71,7 @@ const projects = [
     ],
     links: {
       github: '',
-      posting: 'http://localhost:8000/blog/checkmate',
+      posting: '/blog/checkmate',
     },
   },
   {
