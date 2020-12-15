@@ -10,9 +10,6 @@ function Header() {
 
   const disableMenu = () => {
     setDisabled(!disabled);
-    setTimeout(() => {
-      setDisabled(false);
-    }, 1200);
   };
 
   const handleMenu = () => {
@@ -23,6 +20,14 @@ function Header() {
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location]);
+
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      setDisabled(false);
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, [disabled]);
 
   return (
     <Container>
