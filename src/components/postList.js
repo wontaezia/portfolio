@@ -12,8 +12,10 @@ function PostPreview({ totalCount, edges, tag }) {
 
   return (
     <>
-      <MainTitle className="mainTitle" tag={tag}>
-        <Link to="/blog/">Blog</Link>
+      <MainTitle tag={tag}>
+        <Link className="blogTitle" to="/blog/">
+          Blog
+        </Link>
       </MainTitle>
       <PostCount>{totalCount} Posts</PostCount>
       <PostList>
@@ -59,6 +61,7 @@ const MainTitle = styled.h1`
   border-bottom: 1px solid ${({ theme }) => theme.$darkGray};
   font-weight: 700;
   font-size: 8rem;
+  overflow: hidden;
 
   &::after {
     content: ${({ tag }) => `'${tag ? `#${tag}` : ''}'`};
@@ -68,6 +71,11 @@ const MainTitle = styled.h1`
     background: ${({ theme }) => theme.$mainColor};
     color: ${({ theme }) => theme.$white};
     font-size: 2rem;
+  }
+
+  a {
+    position: relative;
+    display: block;
   }
 
   @media ${device.tablet} {
@@ -201,13 +209,13 @@ const Tags = styled.ul`
 `;
 
 const staggerList = () => {
-  gsap.from(['.mainTitle'], {
+  gsap.from('.blogTitle', {
     y: 100,
     opacity: 0,
     ease: 'power3.easeInOut',
     delay: 0.5,
   });
-  gsap.from(['.post'], {
+  gsap.from('.post', {
     y: 100,
     opacity: 0,
     ease: 'power3.easeInOut',
@@ -216,7 +224,7 @@ const staggerList = () => {
       amount: 0.2,
     },
   });
-  gsap.from(['.loading'], {
+  gsap.from('.loading', {
     y: 0,
     ease: 'power3.easeInOut',
     delay: 1.6,
