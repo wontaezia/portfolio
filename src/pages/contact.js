@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import gsap from 'gsap';
 import Layout from '@components/layout';
 import SEO from '@components/seo';
-import { MAIL_KEY } from '../config';
 import device from '@styles/device';
 import Preloader from '@components/preloader';
 
