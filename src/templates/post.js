@@ -131,22 +131,20 @@ const Body = styled.div`
   li {
     position: relative;
     left: 20px;
-    ${({ theme }) => theme.flex(null, 'center')}
-    flex-wrap: wrap;
     padding: 0.4rem;
     font-size: 14px;
+    word-break: break-all;
 
     &::before {
       content: '';
       position: absolute;
-      top: 50%;
+      top: 1.4rem;
       left: -20px;
       display: inline-block;
       width: 6px;
       height: 6px;
       background: ${({ theme }) => theme.$black};
       border-radius: 50%;
-      transform: translateY(-50%);
     }
   }
 
