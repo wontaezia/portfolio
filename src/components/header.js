@@ -17,10 +17,6 @@ function Header() {
   };
 
   useEffect(() => {
-    setIsMenuOpen(false);
-  }, [window?.location]);
-
-  useEffect(() => {
     let timer = setTimeout(() => {
       setDisabled(false);
     }, 1200);
