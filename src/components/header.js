@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 import Menu from '@components/menu';
 
 function Header() {
-  const { location } = window;
   const [disabled, setDisabled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -19,7 +18,7 @@ function Header() {
 
   useEffect(() => {
     setIsMenuOpen(false);
-  }, [location]);
+  }, [window?.location]);
 
   useEffect(() => {
     let timer = setTimeout(() => {
