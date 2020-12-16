@@ -11,11 +11,6 @@ const paths = [
   },
   {
     id: 3,
-    path: '/portfolio',
-    menu: 'Portfolio',
-  },
-  {
-    id: 4,
     path: '/contact',
     menu: 'Contact',
   },
