@@ -5,8 +5,10 @@ import Layout from '@components/layout';
 import SEO from '@components/seo';
 import { MAIL_KEY } from '../config';
 import device from '@styles/device';
+import Preloader from '@components/preloader';
 
 function Contact() {
+  const [isActive, setIsActive] = useState(false);
   const [message, setMessage] = useState({
     fullname: '',
     fromEmail: '',
@@ -28,6 +30,7 @@ function Contact() {
   const handleSubmit = async e => {
     try {
       e.preventDefault();
+      setIsActive(true);
       let formData = new FormData();
 
       for (const key in message) {
@@ -44,12 +47,14 @@ function Contact() {
         fromEmail: '',
         body: '',
       });
+      setIsActive(false);
     } catch (error) {
       console.log(error);
       setMessage({
         ...message,
         body: '',
       });
+      setIsActive(false);
     }
   };
 
@@ -80,6 +85,7 @@ function Contact() {
         </Textarea>
         <button type="submit">Send</button>
       </Form>
+      {isActive ? <Preloader /> : ''}
     </Layout>
   );
 }
