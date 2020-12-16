@@ -36,7 +36,7 @@ function Contact() {
         formData.append(key, message[key]);
       }
 
-      await fetch(process.env.MAIL_URL, {
+      await fetch(process.env.GATSBY_MAIL_URL, {
         body: formData,
         method: 'POST',
       });
