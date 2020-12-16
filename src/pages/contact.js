@@ -36,7 +36,7 @@ function Contact() {
         formData.append(key, message[key]);
       }
 
-      await fetch(`https://www.flexyform.com/f/${MAIL_KEY}`, {
+      await fetch(URL, {
         body: formData,
         method: 'POST',
       });
@@ -64,7 +64,7 @@ function Contact() {
       <MainTitle>
         <h1 className="contactTitle">Contact</h1>
       </MainTitle>
-      <Form onChange={handleValue} onSubmit={handleSubmit}>
+      <Form netlify>
         <Row>
           <InputBox>
             <input type="text" name="fullname" value={fullname} required />
