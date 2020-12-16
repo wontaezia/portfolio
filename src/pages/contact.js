@@ -36,7 +36,7 @@ function Contact() {
         formData.append(key, message[key]);
       }
 
-      await fetch(URL, {
+      await fetch(process.env.MAIL_URL, {
         body: formData,
         method: 'POST',
       });
@@ -64,7 +64,7 @@ function Contact() {
       <MainTitle>
         <h1 className="contactTitle">Contact</h1>
       </MainTitle>
-      <Form netlify>
+      <Form onChange={handleValue} onSubmit={handleSubmit}>
         <Row>
           <InputBox>
             <input type="text" name="fullname" value={fullname} required />
