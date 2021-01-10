@@ -91,8 +91,7 @@ const Body = styled.div`
 
   h2,
   h3,
-  h4,
-  h5 {
+  h4 {
     padding: 1rem 0;
     margin: 2rem auto 3rem;
     border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
@@ -108,6 +107,11 @@ const Body = styled.div`
 
   h4 {
     font-size: 1.8rem;
+  }
+
+  h5 {
+    font-size: 1.6rem;
+    margin: 3rem auto 3rem;
   }
 
   p.box {
